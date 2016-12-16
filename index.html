@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "index.css">
+    </head>
+    <body>
+        <div id = "gameholder" class = "container">
+            <div class = "game" id = "title" >
+                Hamusta Poker
+            </div>
+            
+            <div id = "table">
+                <div class = "game-cards">
+                <img id = "game-card-1" src = "img/cards/red_joker.png" />
+                <img id = "game-card-2" src = "img/cards/red_joker.png" />
+                <img id = "game-card-3" src = "img/cards/red_joker.png" />
+                <img id = "game-card-4" src = "img/cards/red_joker.png" />
+                <img id = "game-card-5" src = "img/cards/red_joker.png" />
+                </div>
+                
+                <div id = "pot"><h3 id = "haaaiii">Pot: $0</h3></div>
+                <button onclick={gatherBets()}>Gather Bets</button>
+            </div>
+            
+            <div>
+                <h1>Current Game</h1>
+                <button onclick = {createNewGame()}><a href = "javascript:history.go(0)">New Game</a></button>
+                <button onclick = {flop()}>Flop</button>
+                <button onclick = {turn()}>Turn</button>
+                <button onclick = {river()}>River</button>
+            </div>
+            
+            <hr />
+            
+            <div class = "player">
+                <div><h1>Average Hamster</h1>
+                <div id = "bet1">Bet: $0</div>
+                <div id = "chips1">Chips: $50000</div>
+                <div class = "player-hand">
+                    <img id = "player1-card-1" src = "img/cards/black_joker.png" />
+                </div>
+                <div class = "player-hand">
+                    <img id = "player1-card-2" src = "img/cards/black_joker.png" />
+                </div>
+                <div id = "player1-buttons"><button onclick = {makeCardAppearInHandForPlayer1()}>Deal Cards</button>
+                <button onclick = {bet1()}>Bet</button></div></div> 
+                
+                <div><h1>Competitive Hamster</h1>
+                <div id = "bet2">Bet: $0</div>
+                <div id = "chips2">Chips: $50000</div>
+                <div class = "player-hand">
+                    <img id = "player2-card-1" src = "img/cards/black_joker.png" />
+                </div>
+                <div class = "player-hand">
+                    <img id = "player2-card-2" src = "img/cards/black_joker.png" />
+                </div>
+                <div id = "player2-buttons"><button onclick = {makeCardAppearInHandForPlayer2()}>Deal Cards</button>
+                <button onclick = {bet2()}>Bet</button></div></div>
+                
+                <div><h1>Lucky Hamster</h1>
+                <div id = "bet3">Bet: $0</div>
+                <div id = "chips3">Chips: $50000</div>
+                <div class = "player-hand">
+                    <img id = "player3-card-1" src = "img/cards/black_joker.png" />
+                </div>
+                <div class = "player-hand">
+                    <img id = "player3-card-2" src = "img/cards/black_joker.png" />
+                </div>
+                <div id = "player3-buttons"><button onclick = {makeCardAppearInHandForPlayer3()}>Deal Cards</button>
+                <button onclick = {bet3()}>Bet</button></div></div>
+                
+                <div><h1>Clever Hamster</h1>
+                <div id = "bet4">Bet: $0</div>
+                <div id = "chips4">Chips: $50000</div>
+                <div class = "player-hand">
+                    <img id = "player4-card-1" src = "img/cards/black_joker.png" />
+                </div>
+                <div class = "player-hand">
+                    <img id = "player4-card-2" src = "img/cards/black_joker.png" />
+                </div>
+                <div id = "player4-buttons"><button onclick = {makeCardAppearInHandForPlayer4()}>Deal Cards</button>
+                <button onclick = {bet4()}>Bet</button></div></div>
+                
+            </div>
+        </div>
+        
+        <div id = "showGameObject">
+            Game Object
+            <pre id = "json"></pre>
+        </div>
+        
+        <script src = "index.js"></script>
+    </body>
+</html>
